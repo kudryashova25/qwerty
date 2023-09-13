@@ -1,9 +1,30 @@
-const makeItFunny = (str, n) => {
-  let i=0;
-  let result ="";
-  while ( i < str.length ) {
-    const current = str[i]
-  }
+
+//** 
+function index(){
+let n = prompt("Enput n: ");
+let text = prompt("Enput text: ");
+const makeItFunny = () => {
+	let result = '';
+	let i=0;
+	while (i < text.length) {
+		const current= text[i];
+		if((i+1) % n === 0){
+			result = `${result}${current.toUpperCase()}`;
+		}else{
+			result= `${result}${current}`;
+		}
+		i++;
+	}
+	alert(result);
+	
+}
+makeItFunny();
+
+
+
+
+
 }
 
-//alert( 'Interface'[0].toLowerCase() ); // 'i' https://learn.javascript.ru/string#dostup-k-simvolam
+const button = document.querySelector("button");
+button.addEventListener("click", index);
