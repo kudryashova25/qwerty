@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - cipher</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>  Шифр </h1>
+<label>Введите текст:
+    <input type="text" id="textField">
+</label>
+
+<label>При каждом изменении возникает шифр input:
+    <textarea disabled id="textResult"></textarea>
+</label>
+
+<button> изменить </button>
+
+<script>
+    var inputTextField = document.getElementById('textField');
+    var outputTextField = document.getElementById('textResult');
+
+    inputTextField.oninput = function() {
+        outputTextField.value = inputTextField.value;
+    };
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
